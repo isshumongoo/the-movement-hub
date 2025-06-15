@@ -1,4 +1,3 @@
-
 import { BookOpen, GraduationCap, Book, BookUser } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -58,7 +57,7 @@ export default function LeadershipAcademyPage() {
     <section className="min-h-screen w-full bg-gradient-to-br from-yellow-50 via-violet-50 to-white px-2 py-8 flex justify-center">
       <div className="w-full max-w-3xl space-y-10">
 
-        {/* Back to Portal Button - prominent, orange, always at top */}
+        {/* Back to Portal Button */}
         <div className="flex justify-start">
           <button
             className="flex items-center gap-2 px-5 py-2 rounded-xl font-bold uppercase tracking-wide bg-[#FF6200] text-white shadow-lg hover:bg-[#ff8c42] transition animate-fade-in"
@@ -71,10 +70,9 @@ export default function LeadershipAcademyPage() {
         {/* Header */}
         <div className="flex flex-col items-center text-center animate-fade-in">
           <GraduationCap size={44} className="text-yellow-700 mb-2" />
-          <h1 className="text-3xl font-bold text-yellow-700 mb-1">TMS ASSEMBLY Leadership Academy</h1>
+          <h1 className="text-3xl font-bold text-yellow-700 mb-1">TMS ASSEMBLY Academy & Events</h1>
           <p className="text-md text-gray-600 max-w-xl">
-            Welcome to the ASSEMBLY Series! This learning track is for our elite Leadership Cohort members.
-            Explore transformative leadership modules, track your progress, and access exclusive resources below.
+            Welcome! The Academy & Events space is open to <span className="font-semibold text-fuchsia-700">all TMS members</span> to discover and participate in transformative opportunities: leadership modules, seminars, skill-building workshops, community meetings, and conferences. Track your progress and access exclusive resources below!
           </p>
         </div>
         {/* Progress Overview */}
@@ -156,9 +154,9 @@ export default function LeadershipAcademyPage() {
               <h3 className="font-semibold mb-3 flex items-center gap-1"><BookOpen className="text-yellow-700" size={18}/>Frequently Asked Questions</h3>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <span className="font-semibold">Who can access the Leadership Academy?</span>
+                  <span className="font-semibold">Who can access the Academy & Events?</span>
                   <br/>
-                  Only Leadership Cohort members have access to this page and resources.
+                  All TMS members can participate in the Academy, seminars, workshops, community meetings, and conferences.
                 </li>
                 <li>
                   <span className="font-semibold">How is progress tracked?</span>

@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 
 const modules = [
@@ -13,11 +12,11 @@ const LeadershipAcademy = () => {
   return (
     <section>
       <h2 className="text-xl font-semibold mb-3 text-yellow-700 flex items-center gap-2">
-        🎓 TMS ASSEMBLY Series
+        🎓 TMS ASSEMBLY Academy & Events
       </h2>
       <div className="bg-white border rounded-xl shadow-md p-4 mb-3">
         <div className="text-sm text-muted-foreground mb-2">
-          For Leadership Cohort members. Track your modules below.
+          For all TMS members. Track your progress in leadership modules, seminars, workshops, community meetings, and conferences.
         </div>
         <div className="space-y-2">
           {modules.map((mod) => (
