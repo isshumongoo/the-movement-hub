@@ -1,35 +1,29 @@
 
+// Stats data
 const stats = [
   {
-    label: "Hours Served",
-    value: 126,
-    icon: "⏰",
-    color: "bg-blue-100 text-blue-700",
+    label: "HOURS SERVED",
+    value: "126",
   },
   {
-    label: "Badges Earned",
-    value: 8,
-    icon: "🏅",
-    color: "bg-yellow-100 text-yellow-700",
+    label: "BADGES EARNED",
+    value: "8",
   },
   {
-    label: "Active Programs",
-    value: 3,
-    icon: "📅",
-    color: "bg-fuchsia-100 text-fuchsia-700",
+    label: "ACTIVE PROGRAMS",
+    value: "3",
   },
 ];
 
 const QuickStats = () => (
-  <section className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+  <section className="w-full flex flex-col md:flex-row gap-6 justify-between bg-black rounded-2xl py-8 px-3 md:px-12 shadow-lg mb-8 animate-fade-in">
     {stats.map((s) => (
       <div
         key={s.label}
-        className={`flex flex-col items-center justify-center bg-white/95 border rounded-xl shadow-md py-6 hover:shadow-lg hover:-translate-y-1 transition ${s.color}`}
+        className="flex-1 flex flex-col items-center justify-center text-center"
       >
-        <span className="text-3xl md:text-4xl mb-2">{s.icon}</span>
-        <div className="text-2xl font-bold">{s.value}</div>
-        <div className="text-sm font-medium mt-1">{s.label}</div>
+        <div className="text-white text-5xl md:text-6xl font-black font-sans tracking-tight mb-1 drop-shadow-lg">{s.value}+</div>
+        <div className="uppercase text-[#FF6200] text-lg font-bold tracking-widest font-sans">{s.label}</div>
       </div>
     ))}
   </section>
