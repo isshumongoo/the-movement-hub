@@ -2,6 +2,7 @@
 import { BookOpen, GraduationCap, Book, BookUser } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { useNavigate } from "react-router-dom";
 
 const modules = [
   {
@@ -51,9 +52,22 @@ const modules = [
 ];
 
 export default function LeadershipAcademyPage() {
+  const navigate = useNavigate();
+
   return (
     <section className="min-h-screen w-full bg-gradient-to-br from-yellow-50 via-violet-50 to-white px-2 py-8 flex justify-center">
       <div className="w-full max-w-3xl space-y-10">
+
+        {/* Back to Portal Button - prominent, orange, always at top */}
+        <div className="flex justify-start">
+          <button
+            className="flex items-center gap-2 px-5 py-2 rounded-xl font-bold uppercase tracking-wide bg-[#FF6200] text-white shadow-lg hover:bg-[#ff8c42] transition animate-fade-in"
+            onClick={() => navigate("/dashboard")}
+          >
+            ← Back to Portal
+          </button>
+        </div>
+
         {/* Header */}
         <div className="flex flex-col items-center text-center animate-fade-in">
           <GraduationCap size={44} className="text-yellow-700 mb-2" />
