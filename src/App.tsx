@@ -11,6 +11,7 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import AdminBoard from "./pages/AdminBoard";
+import LeadershipAcademyPage from "./pages/LeadershipAcademyPage";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,15 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <AdminBoardWrapper />
+                </ProtectedRoute>
+              }
+            />
+            {/* Leadership Academy (for Leadership Cohort) */}
+            <Route
+              path="/leadership-academy"
+              element={
+                <ProtectedRoute>
+                  <LeadershipAcademyPage />
                 </ProtectedRoute>
               }
             />
