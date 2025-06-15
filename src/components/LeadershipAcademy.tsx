@@ -9,7 +9,7 @@ const modules = [
 const LeadershipAcademy = () => (
   <section>
     <h2 className="text-xl font-semibold mb-3 text-yellow-700 flex items-center gap-2">
-      🎓 TMS Leadership Academy
+      🎓 TMS ASSEMBLY Series
     </h2>
     <div className="bg-white border rounded-xl shadow-md p-4 mb-3">
       <div className="text-sm text-muted-foreground mb-2">
