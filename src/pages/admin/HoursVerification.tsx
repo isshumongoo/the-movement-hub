@@ -1,13 +1,28 @@
 
+import { useState } from "react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
+import { toast } from "@/components/ui/use-toast";
 
-const mockHours = [
+const initialHours = [
   { name: "Maya Patel", chapter: "Flint", hours: 12, verified: false },
   { name: "Alex Johnson", chapter: "Detroit", hours: 20, verified: true },
 ];
 
 export default function HoursVerification() {
+  const [hoursData, setHoursData] = useState(initialHours);
+
+  const handleMarkVerified = (idx: number) => {
+    const updated = hoursData.map((entry, i) =>
+      i === idx ? { ...entry, verified: true } : entry
+    );
+    setHoursData(updated);
+    toast({
+      title: "Success",
+      description: `Hours verified for ${hoursData[idx].name}!`,
+    });
+  };
+
   return (
     <div>
       <h2 className="text-lg font-semibold mb-4">Hours Verification</h2>
@@ -22,7 +37,7 @@ export default function HoursVerification() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {mockHours.map((entry) => (
+          {hoursData.map((entry, idx) => (
             <TableRow key={entry.name}>
               <TableCell>{entry.name}</TableCell>
               <TableCell>{entry.chapter}</TableCell>
@@ -36,7 +51,13 @@ export default function HoursVerification() {
               </TableCell>
               <TableCell>
                 {!entry.verified && (
-                  <Button size="sm" variant="default">Mark Verified</Button>
+                  <Button
+                    size="sm"
+                    variant="default"
+                    onClick={() => handleMarkVerified(idx)}
+                  >
+                    Mark Verified
+                  </Button>
                 )}
               </TableCell>
             </TableRow>
