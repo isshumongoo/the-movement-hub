@@ -79,7 +79,7 @@ const Landing = () => {
         <div className="mt-20 text-center">
           <h2 className="text-3xl font-bold text-primary mb-8">Active Chapters</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Detroit', 'DC', 'Flint', 'Atlanta', 'Chicago'].map((chapter) => (
+            {['Detroit', 'DC', 'Flint'].map((chapter) => (
               <span
                 key={chapter}
                 className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white rounded-full text-sm font-medium"

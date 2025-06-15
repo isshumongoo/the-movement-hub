@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -7,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from '@/components/ui/use-toast';
 
-const chapters = ['Detroit', 'DC', 'Flint', 'Atlanta', 'Chicago', 'Other'];
+const chapters = ['Detroit', 'DC', 'Flint', 'Other'];
 
 const Signup = () => {
   const [formData, setFormData] = useState({
