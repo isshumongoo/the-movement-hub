@@ -54,7 +54,7 @@ export default function LeadershipAcademyPage() {
         <div className="flex flex-col items-center text-center animate-fade-in">
           <Video className="text-fuchsia-700 mb-2" size={44} />
           <h1 className="text-3xl font-bold text-yellow-700 mb-1">
-            TMS ASSEMBLY Livestream & Archive
+            Livestream
           </h1>
           <p className="text-md text-gray-600 max-w-xl">
             Join the livestream or watch past events, seminars, workshops, community meetings, and conferences. All TMS members welcome!
